@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
 /**
  * TODO: Normally factories are returning interfaces. But for this simple
  *       example we are defining direct classes directly.

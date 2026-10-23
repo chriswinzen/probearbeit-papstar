@@ -2,9 +2,20 @@
 declare(strict_types=1);
 
 spl_autoload_register(function (string $class): void {
-    $file = __DIR__ . '/ETL/' . $class . '.php';
+    $prefix = 'Papstar\\PimMiddleware\\ETL\\';
+    $baseDir = __DIR__ . '/ETL/';
 
-    if (file_exists($file)) {
-        require_once $file;
+    if (!str_starts_with($class, $prefix)) {
+        return;
+    }
+
+    $relativeClass = substr($class, strlen($prefix));
+
+    $file = $baseDir
+        . str_replace('\\', DIRECTORY_SEPARATOR, $relativeClass)
+        . '.php';
+
+    if (is_file($file)) {
+        require $file;
     }
 });

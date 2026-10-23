@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-// this is really oldschool :-D
-// but for this simple example it might be sufficient
 require_once __DIR__ . '/autoload.php';
+
+use Papstar\PimMiddleware\ETL\Factory;
 
 define('REQUEST_TIMESTAMP', microtime(true));
 define('PROJECT_ROOT', __DIR__ . DIRECTORY_SEPARATOR);
@@ -31,7 +31,8 @@ try {
     $countImported = $loader->writeToFilesystem($transformerResponseDTO->data, PROJECT_ROOT . $outputFile);
     $countErrors = $loader->writeToFilesystem($transformerResponseDTO->errors, PROJECT_ROOT . $errorsFile);
 } catch (Throwable $exception) {
-    echo 'Laufzeitfehler: ' . $exception->getMessage() . PHP_EOL;
+    var_dump($exception);
+    echo 'Runtime Error: ' . $exception->getMessage() . PHP_EOL;
     exit(1);
 }
 

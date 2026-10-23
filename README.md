@@ -1,6 +1,16 @@
 # PIM ETL Middleware
-## notizen
-Ich habe mich für die Verarbeitung eines Arrays entschieden, da die Daten nicht in eine DB geschrieben werden.
+## Notizen
+### Erste Gedanken
+- Datenverarbeitung (Wie CSV laden? DTO pro Datensatz? LOGs / Ausgabe JSON überschreiben?)
+- From Scratch: 5 Klassen (ETL: Extractor (CSV), Transformer, Loader (JSON) + Factory + Validator)
+- PSR-4 Autoloader ohne Composer?
+- Symfony Command (nur das Modul ohne Framework & requires mbstring + iconv)
+- Anforderungskatalog in README.md in ETL Prozess aufgliedern
+- Micro optimizations für Performance, wenn noch Zeit ist?
+### Entscheidung
+- From Scratch statt Symfony: Um zu zeigen, dass ich Software planen & entwickeln kann, brauch ich kein Framework.
+- PSR-4 Autoloader ohne Composer, weil keine Packages geladen werden.
+- Ich habe mich für die Verarbeitung eines Arrays entschieden, da die Daten nicht in eine DB geschrieben werden.
   So können die Daten leicht erweitert werden & 1:1 durchgeschliffen werden. Das kann im späteren Verlauf zu Problemen
   führen, da beim Mergen von Daten bereits existierende Properties überschrieben werden können. Dies soll aber der
   Definition der PIM ETL Middleware nicht im Wege stehen.
@@ -15,7 +25,7 @@ Ich habe mich für die Verarbeitung eines Arrays entschieden, da die Daten nicht
 
 ### 1. Extract – Daten einlesen
 
-**Ziel:** Die Quelldatei einlesen und die Datensätze für die Verarbeitung vorbereiten.
+Ziel: Die Quelldatei einlesen und die Datensätze für die Verarbeitung vorbereiten.
 
 - Quelldatei einlesen und alle Datensätze erfassen.
 - Die Kopfzeile als Zeile 1 behandeln.
@@ -24,16 +34,16 @@ Ich habe mich für die Verarbeitung eines Arrays entschieden, da die Daten nicht
 
 ### 2. Transform – Daten validieren und aufbereiten
 
-**Ziel:** Ungültige Datensätze erkennen, Daten vereinheitlichen und doppelte SKUs bereinigen.
+Ziel: Ungültige Datensätze erkennen, Daten vereinheitlichen und doppelte SKUs bereinigen.
 
 #### 2.1 Validierung
 
-- **SKU:** Datensätze ohne SKU werden übersprungen.
-- **Preis:** Datensätze mit einem nicht auswertbaren Preis werden übersprungen.
-- **Bestand:** Datensätze mit einem nicht auswertbaren Bestand werden übersprungen.
-- **Bestand:** Negative Werte sind ungültig.
-- **Bestand:** Der Wert `null` ist für nicht physische Produkte oder Zubehör erlaubt.
-- **Fehlerprotokoll:** Jeder fehlerhafte Datensatz wird mit Zeilennummer und Fehlergrund protokolliert.
+- SKU: Datensätze ohne SKU werden übersprungen.
+- Preis: Datensätze mit einem nicht auswertbaren Preis werden übersprungen.
+- Bestand: Datensätze mit einem nicht auswertbaren Bestand werden übersprungen.
+- Bestand: Negative Werte sind ungültig.
+- Bestand: Der Wert `null` ist für nicht physische Produkte oder Zubehör erlaubt.
+- Fehlerprotokoll: Jeder fehlerhafte Datensatz wird mit Zeilennummer und Fehlergrund protokolliert.
 
 #### 2.2 Preisformat vereinheitlichen
 
@@ -61,8 +71,7 @@ SKU ASC
 
 ### 3. Load – Daten ausgeben
 
-**Ziel:** Die aufbereiteten Daten als JSON-Datei bereitstellen.
-
+Finale Daten als JSON-Datei bereitstellen:
 - Ausgabe als gültiges JSON-Array.
 - Die Validierung der einzelnen Datensätze & Duplikate findet im Transformer statt.
 

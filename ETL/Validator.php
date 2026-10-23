@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
+use InvalidArgumentException;
+
+use function file_exists;
+use function is_readable;
+use function is_string;
+use function sprintf;
+
 class Validator
 {
     protected const string ERROR_MESSAGE_FILE_DOES_NOT_EXIST = 'File does not exist: "%s"';

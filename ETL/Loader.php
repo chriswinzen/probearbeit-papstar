@@ -1,6 +1,12 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
+use function count;
+use function file_put_contents;
+use function json_encode;
+
 class Loader
 {
     /**

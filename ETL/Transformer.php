@@ -1,6 +1,19 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
+use InvalidArgumentException;
+use Throwable;
+
+use function floatval;
+use function is_array;
+use function is_numeric;
+use function ksort;
+use function preg_replace;
+use function str_replace;
+use function trim;
+
 class Transformer
 {
     const string VALUE_PRICE_KOSTENLOS = 'kostenlos';

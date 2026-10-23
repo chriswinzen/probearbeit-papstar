@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
 class TransformerResponseDTO
 {
     /**

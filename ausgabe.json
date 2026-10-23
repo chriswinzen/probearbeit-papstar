@@ -7,7 +7,7 @@
         "kategorie": "Teller",
         "ean": "4002911100011",
         "line": 2,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     },
     "PS-1002": {
         "sku": "PS-1002",
@@ -17,7 +17,7 @@
         "kategorie": "Servietten",
         "ean": "4002911100028",
         "line": 8,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     },
     "PS-1003": {
         "sku": "PS-1003",
@@ -27,7 +27,7 @@
         "kategorie": "Becher",
         "ean": "4002911100035",
         "line": 4,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     },
     "PS-1005": {
         "sku": "PS-1005",
@@ -37,7 +37,7 @@
         "kategorie": "Verpackung",
         "ean": "4002911100059",
         "line": 6,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     },
     "PS-1009": {
         "sku": "PS-1009",
@@ -47,7 +47,7 @@
         "kategorie": "Schalen",
         "ean": "4002911100080",
         "line": 10,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     },
     "PS-1010": {
         "sku": "PS-1010",
@@ -57,6 +57,6 @@
         "kategorie": "Zubehoer",
         "ean": "4002911100097",
         "line": 11,
-        "import_timestamp": 1792764860.933618
+        "import_timestamp": 1792788084.40851
     }
 }

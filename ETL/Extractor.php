@@ -1,6 +1,16 @@
 <?php
 declare(strict_types=1);
 
+namespace Papstar\PimMiddleware\ETL;
+
+use RuntimeException;
+use Throwable;
+
+use function array_combine;
+use function fclose;
+use function fgetcsv;
+use function fopen;
+
 class Extractor
 {
     protected const string ROW_NUMBER_KEY = 'line';
