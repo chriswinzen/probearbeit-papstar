@@ -1,0 +1,14 @@
+[
+    {
+        "line": 5,
+        "error": "SKU is invalid: \"\""
+    },
+    {
+        "line": 7,
+        "error": "Quantity is invalid: \"-5\""
+    },
+    {
+        "line": 9,
+        "error": "Price is invalid: \"\""
+    }
+]

@@ -1,0 +1,62 @@
+{
+    "PS-1001": {
+        "sku": "PS-1001",
+        "name": "Pappteller rund 23 cm",
+        "preis": "12.90",
+        "bestand": 340,
+        "kategorie": "Teller",
+        "ean": "4002911100011",
+        "line": 2,
+        "import_timestamp": 1792764860.933618
+    },
+    "PS-1002": {
+        "sku": "PS-1002",
+        "name": "Serviette 3-lagig weiss 33 cm",
+        "preis": "3.60",
+        "bestand": 950,
+        "kategorie": "Servietten",
+        "ean": "4002911100028",
+        "line": 8,
+        "import_timestamp": 1792764860.933618
+    },
+    "PS-1003": {
+        "sku": "PS-1003",
+        "name": "Trinkbecher 0,2 l",
+        "preis": "9.50",
+        "bestand": 0,
+        "kategorie": "Becher",
+        "ean": "4002911100035",
+        "line": 4,
+        "import_timestamp": 1792764860.933618
+    },
+    "PS-1005": {
+        "sku": "PS-1005",
+        "name": "Menuebox klein",
+        "preis": "0.00",
+        "bestand": 15,
+        "kategorie": "Verpackung",
+        "ean": "4002911100059",
+        "line": 6,
+        "import_timestamp": 1792764860.933618
+    },
+    "PS-1009": {
+        "sku": "PS-1009",
+        "name": "Schuessel Zuckerrohr 750 ml",
+        "preis": "5.00",
+        "bestand": 210,
+        "kategorie": "Schalen",
+        "ean": "4002911100080",
+        "line": 10,
+        "import_timestamp": 1792764860.933618
+    },
+    "PS-1010": {
+        "sku": "PS-1010",
+        "name": "Grillschale Alu",
+        "preis": "1.95",
+        "bestand": null,
+        "kategorie": "Zubehoer",
+        "ean": "4002911100097",
+        "line": 11,
+        "import_timestamp": 1792764860.933618
+    }
+}
